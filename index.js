@@ -17,6 +17,8 @@ fs.readFile('users.json', {encoding: 'utf8'}, function (err, data) {
 app.engine('hbs',enginees.handlebars)
 app.set('views','./views')
 app.set('view engine','hbs')
+
+app.use('/profilepics',express.static("images"))
 // to use jade app.set('view engine','jade')
 
 // app.get('/', function (req, res) {
