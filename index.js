@@ -115,6 +115,6 @@ app.get('/table',function (req,res) {
 })
 
 
-var server = app.listen(30022, function () {
+var server = app.listen(3022, function () {
     console.log('Server running at http://localhost:' + server.address().port)
 })
