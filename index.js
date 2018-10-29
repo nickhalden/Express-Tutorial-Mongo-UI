@@ -29,6 +29,8 @@ app.use('/profilepics',express.static("images"))
 //     })
 //    res.send(buffer)
 // })
+
+//pass the index handler template
 app.get('/', function (req, res) {
     res.render("index",{users: users})
 })
@@ -41,10 +43,10 @@ app.get(/dog.*/,function (req,res,next) {
     console.log("DOG GOES WOOF ")
     next()
 })
-
+// pass username one by one to get detail not in loop
 app.get('/:username',function (req,res) {
     var username=req.params.username
-    res.send(username)
+    res.render('users', {username: username})
 })
 app.get('/table',function (req,res) {
     var buffer=''
